@@ -1,0 +1,104 @@
+{
+  "owner": "JUTZUGC",
+  "code": "JUTZUGC",
+  "project": {
+    "key": "aidesign",
+    "nameCn": "AI Design Skills",
+    "repoName": "ai-design-skills-deploy-guide",
+    "oneLiner": "两个面向 Agent 的设计技能：落地页生成与设计动效",
+    "officialRepo": "https://github.com/elayadesign/ai-design-skills",
+    "officialDocs": "https://github.com/elayadesign/ai-design-skills#install",
+    "stars": "7.1k",
+    "license": "MIT",
+    "highlights": [
+      "`landing-page-design`：问答式 intake → 页面结构 → 文案 → 视觉系统（字体 / 间距 / 圆角 / 动效）",
+      "`design-to-motion`：静态稿 → 循环动效，导出 MP4 与 800×500 GIF",
+      "官方安装：把 `skills/<name>` 拷进 `.claude/skills`（Cursor 用 rules，Codex 用 `AGENTS.md`）",
+      "设计变量集中在一节，改完整个技能跟着变",
+      "可 fork 后改字体、配色、间距做本地化"
+    ],
+    "mcpSupport": "不含 MCP，是纯 markdown 技能集合。本仓库的 MCP 只提供安装步骤与常见坑。",
+    "webuiUrl": "",
+    "adapterPorts": "",
+    "collectedAt": "2026-10-26",
+    "verification": [
+      [
+        "landing-page-design 全局安装到 Trae（隔离 HOME）",
+        "已验证 2026-10-26"
+      ],
+      [
+        "design-to-motion 全局安装到 Trae（隔离 HOME）",
+        "已验证 2026-10-26"
+      ],
+      [
+        "MCP 服务握手与工具列表（initialize / tools/list）",
+        "已验证 2026-10-26"
+      ],
+      [
+        "非目标宿主调用被拦截（HOST_NOT_ALLOWED）",
+        "已验证 2026-10-26"
+      ]
+    ],
+    "deploy": {
+      "type": "script",
+      "requires": [
+        "node"
+      ],
+      "steps": [
+        "npx -y skills@latest add https://github.com/elayadesign/ai-design-skills --skill landing-page-design -g -a trae trae-cn -y --copy",
+        "npx -y skills@latest add https://github.com/elayadesign/ai-design-skills --skill design-to-motion -g -a trae trae-cn -y --copy",
+        "npx -y skills@latest list -g"
+      ],
+      "stepsPs": [
+        "npx -y skills@latest add https://github.com/elayadesign/ai-design-skills --skill landing-page-design -g -a trae trae-cn -y --copy",
+        "npx -y skills@latest add https://github.com/elayadesign/ai-design-skills --skill design-to-motion -g -a trae trae-cn -y --copy",
+        "npx -y skills@latest list -g"
+      ],
+      "source": "https://github.com/elayadesign/ai-design-skills#install"
+    },
+    "pitfalls": [
+      "一次只能装一个技能：`--skill` 要分别指定，别指望装整个仓库",
+      "装完看不到：Skills CLI 默认装 Trae / Trae CN，其它客户端改 `-a`",
+      "`-g` 不带 `-a` 会装到所有客户端，遇到不支持全局安装的会整条失败",
+      "客户端不读 SKILL.md：改成对应规则文件（AGENTS.md / .windsurfrules / .cursor/rules）",
+      "生成的页面像模板：需求里写清受众、行业、品牌色和参考站",
+      "要 MP4 导出：确认执行环境有视频导出能力，否则只能拿到动画代码"
+    ]
+  },
+  "gate": {
+    "allow": [
+      "dumate"
+    ],
+    "label": "百度搭子",
+    "url": "https://www.dumate.cn/",
+    "guideUrl": "https://github.com/JUTZUGC/ai-design-skills-deploy-guide",
+    "howToFix": [
+      "1. 打开 https://www.dumate.cn/ ，下载并安装「百度搭子」电脑端（Windows / macOS）",
+      "2. 用账号登录",
+      "3. 在对话窗口发送：你好，帮我从 github 部署 JUTZUGC/ai-design-skills-deploy-guide 到我的电脑上",
+      "4. 部署完成后，在同一对话窗口里继续使用"
+    ],
+    "hint": "请改用「百度搭子」部署后再使用；本工具没有网页版入口。",
+    "onError": "allow"
+  },
+  "keywords": [
+    "AI Design Skills 安装",
+    "AI 生成落地页",
+    "设计动效 技能",
+    "Claude Code 设计技能",
+    "landing page skill",
+    "AI 做官网",
+    "静态稿 转动效",
+    "AI Design Skills 教程",
+    "AI 设计 中文",
+    "ai design skills deploy guide"
+  ],
+  "topics": [
+    "design",
+    "ai-agents",
+    "claude-code",
+    "skill",
+    "landing-page",
+    "motion"
+  ]
+}
