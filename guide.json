@@ -8,7 +8,7 @@
     "oneLiner": "两个面向 Agent 的设计技能：落地页生成与设计动效",
     "officialRepo": "https://github.com/elayadesign/ai-design-skills",
     "officialDocs": "https://github.com/elayadesign/ai-design-skills#install",
-    "stars": "7.1k",
+    "stars": "10.4k",
     "license": "MIT",
     "highlights": [
       "`landing-page-design`：问答式 intake → 页面结构 → 文案 → 视觉系统（字体 / 间距 / 圆角 / 动效）",
@@ -20,7 +20,7 @@
     "mcpSupport": "不含 MCP，是纯 markdown 技能集合。本仓库的 MCP 只提供安装步骤与常见坑。",
     "webuiUrl": "",
     "adapterPorts": "",
-    "collectedAt": "2026-10-26",
+    "collectedAt": "2026-10-28",
     "verification": [
       [
         "landing-page-design 全局安装到 Trae（隔离 HOME）",
